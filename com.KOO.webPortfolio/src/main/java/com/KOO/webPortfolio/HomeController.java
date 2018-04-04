@@ -12,8 +12,9 @@ public class HomeController {
 
 	@GetMapping("/")
 	public String home() {
+		System.out.println("home controller in");
 		log.debug("home controller in");
-		return "index";
+		return "../templates/index";
 	}
 }
 
