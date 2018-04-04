@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -14,7 +15,16 @@ public class HomeController {
 	public String home() {
 		System.out.println("home controller in");
 		log.debug("home controller in");
-		return "test.html";
+		return "index";
+	}
+	
+	@GetMapping("/test")
+	public ModelAndView home2() {
+		ModelAndView result = new ModelAndView();
+		result.setViewName("index");
+		System.out.println("home controller in");
+		log.debug("home controller in");
+		return result;
 	}
 }
 
