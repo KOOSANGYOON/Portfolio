@@ -14,7 +14,7 @@ public class HomeController {
 	public String home() {
 		System.out.println("home controller in");
 		log.debug("home controller in");
-		return "../templates/index";
+		return "test.html";
 	}
 }
 
@@ -25,6 +25,7 @@ public class HomeController {
 //	@GetMapping("/")
 //	public String home() {
 //		log.debug("home controller in");
-//		return "index!!! @@@ !!! @@@ !!! @@@";
+//		System.out.println("home controller in");
+//		return "test";
 //	}
 //}
