@@ -1,18 +1,28 @@
 @charset "UTF-8";
 
-#video { 
-     position: fixed;
-     top: 0px;
-     left: 0px;
-     min-width: 100%;
-     min-height: 100%;
-     width: auto;
-     height: auto;
-     z-index: -1;
-     overflow: hidden;
+body {
+	position: absolute;
+	min-width: 100%;
+	min-height : 100%;
+	width: auto;
+	height: auto;
+	min-height: 100%;
+}
+
+#video {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+	overflow: hidden;
 }
 
 #main-container {
+	font-family: "Times New Roman", Times, serif;
 	background-color: #2979FF;
 	width: 940px;
 	margin: 60px auto;
@@ -33,11 +43,12 @@
 	background-color: #e8ff6a;
 	width: 580px;
 	height: 500px;
-	padding: 20px;
+	padding : 20px;
 	margin-bottom: 20px;
 	float: left;
 	border: 1px solid #bcbcbc;
 	border-radius: 10px;
+	padding: 20px;
 }
 
 #main-sidebar {
@@ -69,6 +80,15 @@
 	}
 	#main-sidebar {
 		float: none;
+		width: auto;
+	}
+}
+
+@media ( max-width : 1000px ) {
+	.container {
+		width: auto;
+	}
+	.container-mainPage {
 		width: auto;
 	}
 }
