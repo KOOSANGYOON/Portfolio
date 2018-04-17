@@ -23,8 +23,20 @@ public class HomeController {
 	
 	@GetMapping("/portfolio/1")
 	public String portfolioOne() {
-		log.debug("test controller in");
+		log.debug("portfolio one controller in");
 		return "portfolioOne";
+	}
+	
+	@GetMapping("/portfolio/2")
+	public String portfolioTwo() {
+		log.debug("portfolio two controller in");
+		return "portfolioTwo";
+	}
+	
+	@GetMapping("/portfolio/3")
+	public String portfolioThree() {
+		log.debug("portfolio three controller in");
+		return "portfolioThree";
 	}
 	
 	@GetMapping("/contact")
