@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+{{> header }}
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<!-- navBar -->
+		{{> navBar }}
+		<!-- /navBar -->
+		
+		<!-- Sidebar -->
+		{{> sideBar}}
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid" style="margin-top: 80px;">
+
+				<!-- Introduction Row -->
+				<h1 class="my-4">
+					PORTFOLIO 1 <small> (programming with JavaScript) </small>
+				</h1>
+				<p>level 1 에 대한 설명과 간단한 요약을 적는 공간입니다.</p>
+				<p>level 1 에 대한 설명과 간단한 요약을 적는 공간입니다.</p>
+				<p>level 1 에 대한 설명과 간단한 요약을 적는 공간입니다.</p>
+				<p>level 1 에 대한 설명과 간단한 요약을 적는 공간입니다.</p>
+
+				<!-- Team Members Row -->
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="my-4">programming list</h2>
+					</div>
+					<div class="col-lg-4 col-sm-6 text-center mb-4">
+						<img class="rounded-circle img-fluid d-block mx-auto"
+							src="http://placehold.it/200x200" alt="">
+						<h3>
+							<a href="https://code-squad.github.io/level1-js/koo/calculator/index.html">Calculator</a>
+							<small>(기본 계산기)</small>
+						</h3>
+						<p>계산기에 대한 간략한 설명</p>
+					</div>
+					<div class="col-lg-4 col-sm-6 text-center mb-4">
+						<img class="rounded-circle img-fluid d-block mx-auto"
+							src="http://placehold.it/200x200" alt="">
+						<h3>
+							<a href="https://code-squad.github.io/level1-js/koo/hangMan/hangMan.html">HangMan Game</a>
+							<small>(행맨 게임)</small>
+						</h3>
+						<p>행맨 게임에 대한 간략한 설명</p>
+					</div>
+					<div class="col-lg-4 col-sm-6 text-center mb-4">
+						<img class="rounded-circle img-fluid d-block mx-auto"
+							src="http://placehold.it/200x200" alt="">
+						<h3>
+							<a href="https://code-squad.github.io/level1-js/koo/puzzle/">15 PUZZLE</a>
+							<small>(15 퍼즐게임)</small>
+						</h3>
+						<p>15 퍼즐게임에 대한 간략한 설명</p>
+					</div>
+					<div class="col-lg-4 col-sm-6 text-center mb-4">
+						<img class="rounded-circle img-fluid d-block mx-auto"
+							src="http://placehold.it/200x200" alt="">
+						<h3>
+							<a href="https://code-squad.github.io/level1-js/koo/pokemon/">POKEMON</a>
+							<small>(포켓몬 게임)</small>
+						</h3>
+						<p>포켓몬 게임에 대한 간략한 설명</p>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.container -->
+
+			<!-- if you need to make footer -->
+			<!-- <footer class="py-5 bg-dark">
+				<div class="container">
+					<p class="m-0 text-center text-white">Copyright &copy; KOO PORTFOLIO</p>
+				</div>
+			</footer> -->
+
+		</div>
+
+	</div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
+

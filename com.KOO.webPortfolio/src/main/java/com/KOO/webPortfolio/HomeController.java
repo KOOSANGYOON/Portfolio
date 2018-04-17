@@ -15,9 +15,21 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/test")
-	public String test() {
+	@GetMapping("/main")
+	public String main() {
+		log.debug("main controller in");
+		return "main";
+	}
+	
+	@GetMapping("/portfolio/1")
+	public String portfolioOne() {
 		log.debug("test controller in");
-		return "test";
+		return "portfolioOne";
+	}
+	
+	@GetMapping("/contact")
+	public String contact() {
+		log.debug("contact controller in");
+		return "test2";
 	}
 }
