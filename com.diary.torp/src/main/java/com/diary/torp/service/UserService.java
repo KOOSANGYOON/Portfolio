@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.diary.torp.UnAuthenticationException;
 import com.diary.torp.UnAuthorizedException;
@@ -39,5 +40,14 @@ public class UserService {
 		}
 		
 		return userRepository.findByUserId(userId).orElse(userRepository.save(new User(userId, password, name)));
+	}
+	
+	@Transactional
+	public User update(User user, String password, String name) throws UnAuthenticationException {
+		if (!user.matchPassword(password)) {
+			throw new UnAuthenticationException();
+		}
+		user.update(name);
+		return user;
 	}
 }
