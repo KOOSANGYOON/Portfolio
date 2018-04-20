@@ -86,5 +86,35 @@ public class UserController {
 		}
 		return "redirect:/";
 	}
-
+	
+	@GetMapping("/updateForm")
+	public String updateForm(HttpSession session , Model model) {
+		User user = HttpSessionUtils.getUserFromSession(session);
+		log.debug("login user is : " + user.toString());
+		model.addAttribute(user);
+		return "/user/updateForm";
+	}
+	
+	@PostMapping("/update")
+	public String update(HttpSession session, String name, String password) {
+		User user = HttpSessionUtils.getUserFromSession(session);
+		log.debug("login user is : " + user.toString());
+		
+		try {
+			User updatedUser = userService.update(user, password, name);
+			log.debug("update info : " + updatedUser.toString());
+		} catch (UnAuthenticationException e) {
+			e.printStackTrace();
+			return "redirect:/user/updateFail";
+		}
+		return "redirect:/";
+	}
+	
+	@GetMapping("/updateFail")
+	public String updateFail(HttpSession session, Model model) {
+		User user = HttpSessionUtils.getUserFromSession(session);
+		model.addAttribute("errorMessage", "업데이트 실패. 비밀번호를 확인해주세요.");
+		model.addAttribute(user);
+		return "/user/updateForm";
+	}
 }

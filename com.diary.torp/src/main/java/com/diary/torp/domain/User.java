@@ -18,7 +18,7 @@ public class User {
 	@Column(unique = true, nullable = false, length = 15)
 	private String userId;
 
-	@Size(min = 4, max = 15)
+	@Size(min = 4, max = 20)
 	@Column(nullable = false, length = 15)
 	@JsonIgnore
 	private String password;
@@ -41,6 +41,15 @@ public class User {
 		this.userId = userId;
 		this.password = password;
 		this.name = name;
+	}
+	
+	public void update(String name) {
+		this.name = name;
+	}
+	
+	@JsonIgnore
+	public boolean isGuestUser() {
+		return false;
 	}
 
 	//getter(), setter() methods	
