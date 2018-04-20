@@ -26,6 +26,22 @@ public class User {
 	@Size(min = 3, max = 20)
 	@Column(nullable = false, length = 20)
 	private String name;
+	
+	private boolean deleted = false;
+	
+	public boolean matchPassword(String password) {
+		return this.password.equals(password);
+	}
+	
+	public User() {
+		
+	}
+	
+	public User(String userId, String password, String name) {
+		this.userId = userId;
+		this.password = password;
+		this.name = name;
+	}
 
 	//getter(), setter() methods	
 	public long getId() {
@@ -43,10 +59,15 @@ public class User {
 	public String getName() {
 		return name;
 	}
+	
+	public boolean isDeleted() {
+		return deleted;
+	}
 
 	//toString() method
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userId=" + userId + ", password=" + password + ", name=" + name + "]";
+		return "User [id=" + id + ", userId=" + userId + ", password=" + password + ", name=" + name + ", deleted="
+				+ deleted + "]";
 	}
 }

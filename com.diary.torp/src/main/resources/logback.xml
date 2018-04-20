@@ -7,7 +7,7 @@
 		</layout>
 	</appender>
 	
-	<logger name="portfolio-admin" level="DEBUG" />
+	<logger name="com.diary.torp" level="DEBUG" />
 	
 	<root level="INFO">
 		<appender-ref ref="STDOUT" />
