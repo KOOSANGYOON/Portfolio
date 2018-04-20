@@ -16,16 +16,15 @@
 		</div>
 	</div>
 	
+	{{^loginedUser}}		<!--non-login -->
 	<div class="btn-group" style="margin-right: 10px;">
 		<button type="button" class="btn btn-info dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			USER
 		</button>
 		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">LOGIN</a>
-			<a class="dropdown-item" href="#">EDIT MY INFO</a>
-			<a class="dropdown-item" href="#">CHANGE PASSWORD</a>
+			<a class="dropdown-item" href="/user/joinForm">JOIN</a>
 			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="#">LOGOUT</a>
+			<a class="dropdown-item" href="/user/loginForm">LOGIN</a>
 		</div>
 	</div>
 	
@@ -35,6 +34,7 @@
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">MY SCHEDULE</a>
+			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">TODO LIST</a>
 		</div>
 	</div>
@@ -45,8 +45,11 @@
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">QnA BOARD</a>
+			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">TODAY's HUMOR</a>
+			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">EMPLOYMENT DATA</a>
+			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">TODAY's BOOK</a>
 		</div>
 	</div>
@@ -57,10 +60,70 @@
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">TOTAL CHATROOM</a>
+			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">MAKE CHATROOM</a>
+			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">DIRECT MESSAGE</a>
+			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">ALERT CHANNEL</a>
 		</div>
 	</div>
-		
+	{{/loginedUser}}
+	
+	{{#loginedUser}}			<!-- login user -->
+	<div class="btn-group" style="margin-right: 10px;">
+		<button type="button" class="btn btn-info dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{{loginedUser.name}}
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="/edit">EDIT MY INFO</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">CHANGE PASSWORD</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="/user/logout">LOGOUT</a>
+		</div>
+	</div>
+	
+	<div class="btn-group" style="margin-right: 10px;">
+		<button type="button" class="btn btn-success dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			SCHEDULING
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">MY SCHEDULE</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">TODO LIST</a>
+		</div>
+	</div>
+	
+	<div class="btn-group" style="margin-right: 10px;">
+		<button type="button" class="btn btn-warning dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			COMMUNITY
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">QnA BOARD</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">TODAY's HUMOR</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">EMPLOYMENT DATA</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">TODAY's BOOK</a>
+			<div class="dropdown-divider"></div>
+		</div>
+	</div>
+	
+	<div class="btn-group" style="margin-right: 100px;">
+		<button type="button" class="btn btn-danger dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			CHAT
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">TOTAL CHATROOM</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">MAKE CHATROOM</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">DIRECT MESSAGE</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">ALERT CHANNEL</a>
+		</div>
+	</div>
+	{{/loginedUser}}
 </nav>
