@@ -48,6 +48,6 @@ public class UserService {
 			throw new UnAuthenticationException();
 		}
 		user.update(name);
-		return user;
+		return userRepository.save(user);
 	}
 }
