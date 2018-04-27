@@ -1,47 +1,49 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-	<button type="button" class="btn btn-outline-primary" id="menu-toggle">></button>
-	<a class="navbar-brand" href="/">&nbsp&nbsp&nbsp TORP</a>
+	<button type="button" class="btn btn-outline-primary" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+	<a class="navbar-brand" style="color: white;"><i class="material-icons" style="font-size:20px">smoking_rooms</i>&nbsp T &nbsp O &nbsp R &nbsp P</a>
 	
 	<div class="container">
 		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-			
-				<!-- <li class="nav-item active"><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li> -->
-				
-				<a class="btn btn-primary" href="/" role="button">HOME</a>
-				<!-- <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Board</a></li> -->
-			</ul>
+			<!-- <ul class="navbar-nav ml-auto">
+				<a class="btn btn-primary" href="/" role="button"><span class="glyphicon glyphicon-home"></span>&nbsp HOME</a>
+			</ul> -->
 		</div>
+	</div>
+	
+	<div class="btn-group" style="margin-right: 10px;">
+	<a class="btn btn-primary" href="/" role="button"><span class="glyphicon glyphicon-home"></span>&nbsp HOME</a>
 	</div>
 	
 	{{^loginedUser}}		<!--non-login -->
 	<div class="btn-group" style="margin-right: 10px;">
 		<button type="button" class="btn btn-info dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			USER
+			<span class="glyphicon glyphicon-user"></span>&nbsp USER
 		</button>
 		<div class="dropdown-menu">
-			<a class="dropdown-item" href="/user/joinForm">JOIN</a>
+			<a class="dropdown-item" href="/user/joinForm"><span class="glyphicon glyphicon-plus"></span>&nbsp JOIN</a>
 			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="/user/loginForm">LOGIN</a>
+			<a class="dropdown-item" href="/user/loginForm"><span class="glyphicon glyphicon-log-in"></span>&nbsp LOGIN</a>
 		</div>
 	</div>
 	
 	<div class="btn-group" style="margin-right: 10px;">
 		<button type="button" class="btn btn-success dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			SCHEDULING
+			<span class="glyphicon glyphicon-calendar"></span>&nbsp SCHEDULING
 		</button>
 		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">MY SCHEDULE</a>
+			<a class="dropdown-item" href="#">TEST---</a>
 			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="#">TODO LIST</a>
+			<a class="dropdown-item" href="#">TEST---</a>
 		</div>
 	</div>
 	
 	<div class="btn-group" style="margin-right: 10px;">
 		<button type="button" class="btn btn-warning dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			COMMUNITY
+			<span class="glyphicon glyphicon-globe"></span>&nbsp COMMUNITY
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">QnA BOARD</a>
@@ -56,7 +58,7 @@
 	
 	<div class="btn-group" style="margin-right: 100px;">
 		<button type="button" class="btn btn-danger dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			CHAT
+			<span class="glyphicon glyphicon-send"></span>&nbsp CHAT
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">TOTAL CHATROOM</a>
@@ -73,31 +75,31 @@
 	{{#loginedUser}}			<!-- login user -->
 	<div class="btn-group" style="margin-right: 10px;">
 		<button type="button" class="btn btn-info dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			{{loginedUser.name}}
+			<span class="glyphicon glyphicon-user"></span>&nbsp {{loginedUser.name}}
 		</button>
 		<div class="dropdown-menu">
-			<a class="dropdown-item" href="/user/updateForm">EDIT MY INFO</a>
+			<a class="dropdown-item" href="/user/updateForm"><span class="glyphicon glyphicon-pencil"></span>&nbsp EDIT MY INFO</a>
 			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="#">CHANGE PASSWORD</a>
+			<a class="dropdown-item" href="#"><span class="glyphicon glyphicon-wrench"></span>&nbsp CHANGE PASSWORD</a>
 			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="/user/logout">LOGOUT</a>
+			<a class="dropdown-item" href="/user/logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp LOGOUT</a>
 		</div>
 	</div>
 	
 	<div class="btn-group" style="margin-right: 10px;">
 		<button type="button" class="btn btn-success dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			SCHEDULING
+			<span class="glyphicon glyphicon-calendar"></span>&nbsp SCHEDULING
 		</button>
 		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">MY SCHEDULE</a>
+			<a class="dropdown-item" href="#"><span class="glyphicon glyphicon-time"></span>&nbsp MY SCHEDULE</a>
 			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="#">TODO LIST</a>
+			<a class="dropdown-item" href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp TODO LIST</a>
 		</div>
 	</div>
 	
 	<div class="btn-group" style="margin-right: 10px;">
 		<button type="button" class="btn btn-warning dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			COMMUNITY
+			<span class="glyphicon glyphicon-globe"></span>&nbsp COMMUNITY
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">QnA BOARD</a>
@@ -113,7 +115,7 @@
 	
 	<div class="btn-group" style="margin-right: 100px;">
 		<button type="button" class="btn btn-danger dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			CHAT
+			<span class="glyphicon glyphicon-send"></span>&nbsp CHAT
 		</button>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">TOTAL CHATROOM</a>

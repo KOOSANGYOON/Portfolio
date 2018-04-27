@@ -21,6 +21,8 @@
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
 				<!-- main contents 넣을 자리 입니다. 이력서를 넣거나(양식맞춰) 사진을 넣고 개인의 설명을 넣을것입니다. -->
+				<div class="testfile">asdfasdf</div>
+				<div id='calendar'></div>
 			</div>
 		</div>
 		<!-- /#page-content-wrapper -->
@@ -29,23 +31,26 @@
 	<!-- /#wrapper -->
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Menu Toggle Script -->
 	<script>
+	$(document).ready(function() {
+  		// page is now ready, initialize the calendar...
+		console.log("hi1");
+		
+		$('#calendar').fullCalendar();
+		
+		console.log("hi2");
+	});
+
+    
 	$("#menu-toggle").click(function(e) {
         e.preventDefault();
-        if ($("#menu-toggle").text() == "<") {
-	        $("#wrapper").toggleClass("toggled");
-        		$("#menu-toggle").html(">");
-        }else {
-	        $("#wrapper").toggleClass("toggled");
-	        $("#menu-toggle").html("<");
-        }
+        $("#wrapper").toggleClass("toggled");
     });
     </script>
-
+    
 </body>
 
 </html>
