@@ -20,9 +20,12 @@
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
-				<!-- main contents 넣을 자리 입니다. 이력서를 넣거나(양식맞춰) 사진을 넣고 개인의 설명을 넣을것입니다. -->
-				<div class="testfile">asdfasdf</div>
-				<div id='calendar'></div>
+				<!-- main contents 넣을 자리 입니다. -->
+				<div class="jumbotron">
+				<div class="jumbotron" id="test" style="background-color: #4286f4; margin-left: 20%; min-width: 70%; border-radius: 25px;">
+					<div id='calendar' style="margin: 20px;"></div>
+				</div>
+				
 			</div>
 		</div>
 		<!-- /#page-content-wrapper -->
@@ -43,8 +46,7 @@
 		
 		console.log("hi2");
 	});
-
-    
+	
 	$("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
